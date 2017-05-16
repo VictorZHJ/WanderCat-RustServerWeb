@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>放浪貓WanderCat - RustServer</title>
+  <link rel="icon" href="https://wandercat.com.tw/image/rusticon.png" type="image/png"/>
+  <link rel="shortcut icon" href="https://wandercat.com.tw/image/rusticon.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="https://wandercat.com.tw/image/rusticon.png" type="image/png"/>
+  <link rel="stylesheet" href="https://wandercat.com.tw/css/bs3.css"  type="text/css">
+  <script src="https://wandercat.com.tw/js/script.js" type="text/javascript"></script>
+  <script src="https://wandercat.com.tw/js/w3data.js" type="text/javascript"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body onload="navbarcommands()">
+  <div w3-include-html="https://wandercat.com.tw/navbar.html"></div>
+  <!--導覽列-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10  col-xs-12 col-md-offset-1" style="line-height:32px;">
+        <h2><font color="#ff6e00">指令Commands</font></h2>
+        <br>
+        <img src="https://wandercat.com.tw/images/divider.png" width="70%"/>
+        <h4><font color="red">Friend</font></h4>
+        <h4>好友：<font color="#ffd479"> /friend</font> </h4>
+        <h4>新增好友： <font color="#ffd479">/friend + Name </font></h4>
+        <h4>刪除好友： <font color="#ffd479">/friend - Name</font></h4>
+        <h4>確認好友狀態： <font color="#ffd479">/friend list Name</font></h4>
+        <h4>好友PK：<font color="#ffd479"> /ff on | /ff off</font> </h4>
+        <br>
+        <img src="https://wandercat.com.tw/images/divider.png" width="70%"/>
+        <h4><font color="red">TP</font></h4>
+        <h4>傳送到某玩家身邊：<font color="#ffd479"> /tpr Name</font></h4>
+        <h4>接受玩家的傳送：<font color="#ffd479"> /tpa</font></h4>
+        <h4>取消傳送 | 拒絕傳送：<font color="#ffd479"> /tpc </font></h4>
+        <h4>交易村：<font color="#ffd479"> /town</font>(手上請勿持有任何東西)</h4>
+        <br>
+        <img src="https://wandercat.com.tw/images/divider.png" width="70%"/>
+        <h4><font color="red">Home</font></h4>
+        <h4>傳送到家裡：<font color="#ffd479"> /home Home </font></h4>
+        <h4>設置一個家：<font color="#ffd479"> /home add Home </font></h4>
+        <h4>已設置的家：<font color="#ffd479"> /home list </font></h4>
+        <h4>刪除家：<font color="#ffd479"> /home remove Home </font></h4>
+        <br>
+        <img src="https://wandercat.com.tw/images/divider.png" width="70%"/>
+        <h4><font color="red">Tool</font></h4>
+        <h4>彩色ID：<font color=#ffd479> /colours </font></h4>
+        <h4>可領取的禮包：<font color="#ffd479"> /kit </font></h4>
+        <h4>設定自動關門：<font color="#ffd479"> /ad 10 (5-30秒) </font></h4>
+        <h4>查詢線上玩家：<font color="#ffd479"> /players | /who </font></h4>
+        <h4>設定武器準心：<font color="#ffd479"> F5</font></h4>
+        <h4>移除工具：<font color="#ffd479"> /remove </font> | <font color="#ffd479"> /remove  10 </font></h4>
+        <br>
+        <img src="https://wandercat.com.tw/images/divider.png" width="70%"/>
+        <h4><font color="red">Clan</font></h4>
+        <h4><font color="#ffd479">/clan</font> - 顯示有關您家族的相關訊息</h4>
+        <h4><font color="#ffd479">/clan help</font> - 顯示有關家族系統的相關指令</h4>
+        <h4><font color="#ffd479">/c 訊息...</font> - 家族對話</h4>
+        <h4><font color="#ffd479">/clan create \"標籤\" \"描述\"</font> - 創建一個您所擁有的新家族</h4>
+        <h4><font color="#ffd479">/clan join \"標籤\"</font> - 申請加入家族</h4>
+        <h4><font color="#ffd479">/clan leave</font> - 離開您目前的家族</h4>
+        <br>
+        <h4><font color="#74c6ff">家族管理員</font> 指令：</h4>
+        <h4><font color="#ffd479">/clan invite \"Player name\"</font> - 邀請玩家進入家族</h4>
+        <h4><font color="#ffd479">/clan kick \"Player name\"</font> - 從家族踢一個成員</h4>
+        <br>
+        <h4><font color="#a1ff46">家族擁有者</font> 指令：</h4>
+        <h4><font color="#ffd479">/clan promote \"Name\"</font> - 將成員提升為管理員</h4>
+        <h4><font color="#ffd479">/clan demote \"Name\"</font> - 將管理員降級為成員</h4>
+        <h4><font color="#ffd479">/clan disband forever</font> - 解散你的家族（無法取消，注意！！）"</h4>
+      </div>
+    </div>
+    <script src="https://wandercat.com.tw/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="https://wandercat.com.tw/js/bs3.js" type="text/javascript"></script>
+    <script>
+      w3IncludeHTML();
+    </script>
+</body>
+
+</html>
